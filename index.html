@@ -10,6 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="password-gate" class="password-gate">
+    <div class="password-gate-inner">
+      <h2 class="password-gate-title">Portfolio</h2>
+      <p class="password-gate-subtitle">Enter the password to view</p>
+      <form id="password-form" class="password-form">
+        <input type="password" id="password-input" class="password-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="password-submit">Enter</button>
+      </form>
+      <p id="password-error" class="password-error" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div id="portfolio-content" class="portfolio-content" hidden>
   <header class="site-header">
     <nav class="nav">
       <a href="#top" class="logo">Robotics Portfolio</a>
@@ -142,8 +155,41 @@
   <footer class="site-footer">
     <p>Robotics Portfolio</p>
   </footer>
+  </div>
 
   <script>
+    (function () {
+      const STORAGE_KEY = 'portfolio_unlocked';
+      const CORRECT_PASSWORD = 'rayne_milner';
+
+      const gate = document.getElementById('password-gate');
+      const content = document.getElementById('portfolio-content');
+      const form = document.getElementById('password-form');
+      const input = document.getElementById('password-input');
+      const errorEl = document.getElementById('password-error');
+
+      function showPortfolio() {
+        gate.classList.add('is-unlocked');
+        content.hidden = false;
+        sessionStorage.setItem(STORAGE_KEY, '1');
+      }
+
+      if (sessionStorage.getItem(STORAGE_KEY)) {
+        showPortfolio();
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorEl.textContent = '';
+        if (input.value === CORRECT_PASSWORD) {
+          showPortfolio();
+        } else {
+          errorEl.textContent = 'Incorrect password. Please try again.';
+          input.select();
+        }
+      });
+    })();
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
