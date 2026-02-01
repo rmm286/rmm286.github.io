@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#top" class="logo">Robotics Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#depth">Depth</a></li>
+        <li><a href="#unity">Unity</a></li>
+        <li><a href="#planner">Planner</a></li>
+        <li><a href="#dynamics">Dynamics</a></li>
+        <!-- <li><a href="#gripper">Gripper</a></li>
+        <li><a href="#damage">Damage</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Rayne Milner's Portfolio</h1>
+      <p class="hero-subtitle">Dynamics, planning, simulation, and field robotics</p>
+    </section>
+
+    <section id="depth" class="project">
+      <div class="project-card">
+        <span class="project-number">01</span>
+        <h2>Emulated Depth Sensors</h2>
+        <ul>
+          <li>Implemented online rendering of depth for emulated lidar and RGB-D sensors.</li>
+          <li>Utilized a compute shader to render depth on the GPU.</li>
+          <li>Converted depth data in camera space to XYZ coordinates in global space.</li>
+          <li>Employed to test the lidar and drive system, ensuring system safety.</li>
+          <li>Used to render the physical camera's sensor output in a virtual environment.</li>
+        </ul>
+        <figure class="project-figure">
+          <img src="images/page-4-0.png" alt="Lidar scan in strawberry field simulation" width="600" height="400">
+        </figure>
+        <figure class="project-figure">
+          <img src="images/page-4-1.png" alt="Emulator playback" width="600" height="400">
+          <figcaption class="caption">Emulator Playback</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="unity" class="project">
+      <div class="project-card">
+        <span class="project-number">02</span>
+        <h2>Unity Robotics Simulation</h2>
+        <ul>
+          <li>Developed a robotics simulator using the Unity game engine.</li>
+          <li>Integrated the simulator with the control system, machine learning stack, and sensor stacks.</li>
+          <li>Utilized company-wide for development, deployment, and testing purposes.</li>
+          <li>Led the development of the Unity simulation project over three months, managing a team of two engineers.</li>
+        </ul>
+        <figure class="project-figure">
+          <img src="images/page-3-0.png" alt="Emulated gripper architecture" width="600" height="400">
+          <figcaption class="caption">Emulated Gripper Architecture</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="planner" class="project">
+      <div class="project-card">
+        <span class="project-number">03</span>
+        <h2>Smooth Curvature Planner</h2>
+        <p class="project-lead">Developed planning algorithms for non-holonomic robots that respect acceleration and jerk constraints.</p>
+        <p><strong>Implemented multiple approaches:</strong></p>
+        <ul>
+          <li><strong>RRT*</strong>, an online NLP optimizer, and a heuristic approach based on scientific literature.</li>
+          <li><strong>Backman Approach:</strong> Constructs paths from elementary segments while adhering to constraints.</li>
+          <li><strong>OMPL Approach:</strong> Uses an off-the-shelf solver that incorporates state equations and constraints to generate planning outputs.</li>
+        </ul>
+        <p>Tested the efficacy of these algorithms both in simulation and on hardware.</p>
+        <figure class="project-figure">
+          <img src="images/page-2-0.png" alt="Trajectory constraints on curvature and velocity" width="600" height="400">
+        </figure>
+        <figure class="project-figure">
+          <img src="images/page-2-1.png" alt="Example control output" width="600" height="400">
+          <figcaption class="caption">Example Control Output</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="dynamics" class="project">
+      <div class="project-card">
+        <span class="project-number">04</span>
+        <h2>Robotic Dynamics Model and Simulation</h2>
+        <ul>
+          <li>Created a dynamics model of a non-holonomic mobile robot for co-harvest applications.</li>
+          <li>Developed the model using Python, Gazebo, and ROS nodes.</li>
+          <li>Generated a URDF file from the CAD model.</li>
+          <li>Fused simulated odometry and GPS data for accurate localization.</li>
+          <li>Utilized the model to develop planning and control algorithms prior to hardware implementation.</li>
+        </ul>
+        <figure class="project-figure">
+          <img src="images/page-1-0.png" alt="Dynamics simulator architecture diagram" width="600" height="400">
+        </figure>
+        <figure class="project-figure">
+          <img src="images/page-1-1.png" alt="Robotic vehicle in simulated vineyard" width="600" height="400">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Section 5: Gripper Interrupt Fix (commented out)
+    <section id="gripper" class="project">
+      <div class="project-card">
+        <span class="project-number">05</span>
+        <h2>Gripper Interrupt Fix</h2>
+        <p>Identified and diagnosed sensor register misconfigurations caused by an Object Dictionary file refactor in a CANopen-based gripper system for a strawberry-picking robot, impacting both vacuum and finger touch sensors.</p>
+        <p>Investigated operational effects by analyzing CAN traffic and testing dynamic threshold adjustments, discovering defaulting behavior and low-level performance bottlenecks in Python-based polling loops.</p>
+        <p>Implemented a custom CANopen reprogramming script, dynamically adjusting OD entries to restore functionality and improve sensor performance, achieving partial recovery but identifying operational risks.</p>
+        <p>Quantified operational risks of dynamic reprogramming, finding a 10% failure rate rendering the gripper inoperable, leading to a cost-benefit analysis of immediate fixes versus systemic improvements.</p>
+        <p>Proposed long-term solution, integrating OD reconfiguration into the commissioning process for future seasons to ensure robust deployment and sensor calibration, minimizing operational downtime.</p>
+      </div>
+    </section>
+    -->
+
+    <!-- Section 6: Damage Mitigation (commented out)
+    <section id="damage" class="project">
+      <div class="project-card">
+        <span class="project-number">06</span>
+        <h2>Damage Mitigation in Robotic Harvesting Systems</h2>
+        <p>Diagnosed fruit damage causes for apples and strawberries in robotic harvesting systems, identifying conveyance issues for apples and uneven distribution in bulk bins for strawberries.</p>
+        <p>Designed and implemented a dynamic conveyance control system using the pick rate topic from a "picker" service to adjust PD4 motor velocity in real time, reducing conveyor bottlenecks.</p>
+        <p>Enhanced the robotic arm motion controller for strawberries by adding randomized drop point generation to distribute fruit across bins evenly, minimizing bruising during bulk filling.</p>
+        <p>Conducted simulations and A/B testing in field trials, collaborating with growers to quantify results, achieving a <strong>20% reduction in apple damage</strong> and a <strong>60% reduction in strawberry bruising</strong>.</p>
+        <p>Proposed future enhancements, including sensor-based bin mapping for optimized drop placement and additional conveyor handling adjustments for further damage reduction.</p>
+      </div>
+    </section>
+    -->
+  </main>
+
+  <footer class="site-footer">
+    <p>Robotics Portfolio</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
