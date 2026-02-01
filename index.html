@@ -161,6 +161,7 @@
     (function () {
       const STORAGE_KEY = 'portfolio_unlocked';
       const CORRECT_PASSWORD = 'rayne_milner';
+      const ACCESS_TOKEN = 'view_8f3k9m2q';  // share in links: ?access=view_8f3k9m2q
 
       const gate = document.getElementById('password-gate');
       const content = document.getElementById('portfolio-content');
@@ -174,8 +175,30 @@
         sessionStorage.setItem(STORAGE_KEY, '1');
       }
 
+      function cleanAccessFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('access')) {
+          const url = new URL(window.location.href);
+          url.searchParams.delete('access');
+          const clean = url.pathname + (url.hash || '');
+          window.history.replaceState({}, '', clean);
+        }
+      }
+
+      function checkUrlAccess() {
+        const params = new URLSearchParams(window.location.search);
+        const access = params.get('access');
+        if (access === ACCESS_TOKEN) {
+          showPortfolio();
+          cleanAccessFromUrl();
+        }
+      }
+
       if (sessionStorage.getItem(STORAGE_KEY)) {
         showPortfolio();
+        cleanAccessFromUrl();
+      } else {
+        checkUrlAccess();
       }
 
       form.addEventListener('submit', function (e) {
