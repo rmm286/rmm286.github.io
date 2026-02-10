@@ -96,6 +96,35 @@ main {
   font-size: 1.1rem;
 }
 
+/* --- Section groups (Advanced Farm / UC Davis) --- */
+.section-group {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 5rem;
+}
+.section-group:last-of-type { margin-bottom: 2.5rem; }
+.section-group-title {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.section-group-intro {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.section-group-intro p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.section-group-intro strong { color: var(--accent); }
+
 /* --- Project cards --- */
 .project {
   margin-bottom: 2.5rem;
