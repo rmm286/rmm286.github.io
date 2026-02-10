@@ -74,6 +74,7 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
+  scroll-margin-top: 5rem; /* prevent sticky header from covering anchor target */
 }
 
 /* --- Hero --- */
@@ -98,6 +99,7 @@ main {
 /* --- Project cards --- */
 .project {
   margin-bottom: 2.5rem;
+  scroll-margin-top: 5rem; /* leave room for sticky header when navigating via nav links */
 }
 .project-card {
   background: var(--bg-card);
