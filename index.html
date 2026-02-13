@@ -30,7 +30,8 @@
     <section id="osaro" class="section-group" aria-labelledby="osaro-heading">
       <h2 id="osaro-heading" class="section-group-title">Professional Experience — Osaro</h2>
       <div class="section-group-intro">
-        <p>As <strong>Sr. Software Manager at Osaro</strong> (01/2025 – Present) I scaled the engineering org from 5 to 12 and led technical direction for enterprise deployments (e.g. Home Depot, DHL), from architecture and sprint planning through on-site integration. I mentor ICs and managers to bridge AI research and production-grade software.</p>
+        <p>As <strong>Sr. Software Manager at Osaro</strong> (01/2025 – Present) I architected a Vision-Language-Action (VLA) platform for industrial robotics, designing the safety-critical control layer in Rust that bridges large-scale foundation models with physical actuation. I scaled the engineering org from 5 to 12 and led technical implementation for multi-million dollar enterprise deployments (e.g. Home Depot, DHL), driving on-site integration, hardware debugging, and architectural decisions.</p>
+        <p>I engineered real-time inter-service communication with gRPC and Protobuf for low-latency streaming between distributed planning services and edge-deployed robot controllers, and validated motion plans using the Bevy simulation framework for industrial 6-DOF arms—troubleshooting motion planning and inverse-kinematics failures in live customer environments.</p>
       </div>
 
       <section id="vla" class="project">
@@ -38,13 +39,12 @@
           <span class="project-number">01</span>
           <h2>Architecting the VLA</h2>
           <ul>
-            <li><strong>Architected the VLA</strong> platform; led the project, service architecture, and first MVP in <strong>Rust</strong> (Rust/Python control layer for autonomous agents).</li>
-            <li>Real-time state management and multimodal data ingestion for large-scale foundation models that reason and act in the physical world.</li>
-            <li>Kubernetes-native infrastructure: fault-tolerant planning engines in Rust, scalable APIs for production.</li>
+            <li>Managed the project, defined the service architecture, and shipped the first MVP in <strong>Rust</strong> — a control layer that powers autonomous VLA agents.</li>
+            <li>Built real-time state management and multimodal data ingestion for training large-scale foundation models that reason and act in the physical world.</li>
+            <li>Delivered Kubernetes-native infrastructure for agentic workflows: fault-tolerant planning engines in Rust and scalable APIs for production, mission-critical operations.</li>
           </ul>
           <figure class="project-figure video-wrapper">
             <div class="video-inner">
-              <!-- Drop your video in the videos/ folder and set the filename below (e.g. osaro-vla-demo.mp4) -->
               <video controls>
                 <source src="videos/osaro-vla-demo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
