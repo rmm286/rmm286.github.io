@@ -30,8 +30,8 @@
     <section id="osaro" class="section-group" aria-labelledby="osaro-heading">
       <h2 id="osaro-heading" class="section-group-title">Professional Experience — Osaro</h2>
       <div class="section-group-intro">
-        <p>As <strong>Sr. Software Manager at Osaro</strong> (01/2025 – Present) I architected a Vision-Language-Action (VLA) platform for industrial robotics, designing the safety-critical control layer in Rust that bridges large-scale foundation models with physical actuation. I scaled the engineering org from 5 to 12 and led technical implementation for multi-million dollar enterprise deployments (e.g. Home Depot, DHL), driving on-site integration, hardware debugging, and architectural decisions.</p>
-        <p>I engineered real-time inter-service communication with gRPC and Protobuf for low-latency streaming between distributed planning services and edge-deployed robot controllers, and validated motion plans using the Bevy simulation framework for industrial 6-DOF arms—troubleshooting motion planning and inverse-kinematics failures in live customer environments.</p>
+        <p>As <strong>Sr. Software Manager at Osaro</strong>, I architected a Vision-Language-Action (VLA) platform for industrial robotics. I designed the safety-critical control layer in Rust, bridging large-scale foundation models with physical actuation. I grew the engineering org from 5 to 12 and led multi-million dollar enterprise deployments (e.g. Home Depot, DHL)—owning on-site integration, hardware debugging, and architectural decisions.</p>
+        <p>On the systems side, I built real-time inter-service communication with gRPC and Protobuf for low-latency streaming between distributed planning services and edge-deployed robot controllers. I also validated motion plans using the Bevy simulation framework for industrial 6-DOF arms, troubleshooting inverse-kinematics and motion-planning failures in live customer environments.</p>
       </div>
 
       <section id="vla" class="project">
@@ -39,9 +39,9 @@
           <span class="project-number">01</span>
           <h2>Architecting the VLA</h2>
           <ul>
-            <li>Managed the project, defined the service architecture, and shipped the first MVP in <strong>Rust</strong> — a control layer that powers autonomous VLA agents.</li>
-            <li>Built real-time state management and multimodal data ingestion for training large-scale foundation models that reason and act in the physical world.</li>
-            <li>Delivered Kubernetes-native infrastructure for agentic workflows: fault-tolerant planning engines in Rust and scalable APIs for production, mission-critical operations.</li>
+            <li>Defined the service architecture and shipped the first MVP in <strong>Rust</strong> — a safety-critical control layer that powers autonomous VLA agents.</li>
+            <li>Built real-time state management and multimodal data ingestion to train foundation models that reason and act in the physical world.</li>
+            <li>Delivered Kubernetes-native infrastructure for agentic workflows, including fault-tolerant planning engines and scalable APIs for mission-critical operations.</li>
           </ul>
           <figure class="project-figure video-wrapper">
             <div class="video-inner">
@@ -59,7 +59,7 @@
     <section id="advanced-farm" class="section-group" aria-labelledby="advanced-farm-heading">
       <h2 id="advanced-farm-heading" class="section-group-title">Professional Experience — Advanced Farm</h2>
       <div class="section-group-intro">
-        <p>At <strong>Advanced Farm</strong> I was a Robotics Engineer and later Sr. Software Manager, leading a team of four engineers on control, actuation, and simulation for a multi-arm, multi-axis robotic fruit harvester. My work focused on building simulation frameworks for fault detection and system validation, real-time control and state management in C#, Python, and Go, and end-to-end robotic simulators that accelerated deployment and cut field debug time. The projects below cover emulated depth sensing and the Unity-based simulation stack used across the company.</p>
+        <p>At <strong>Advanced Farm</strong>, I progressed from Robotics Engineer to Sr. Software Manager, leading a team of four on control, actuation, and simulation for a multi-arm robotic fruit harvester. I built simulation frameworks for fault detection and system validation, implemented real-time control and state management in C#, Python, and Go, and delivered end-to-end robotic simulators that accelerated deployment and cut field debug time.</p>
       </div>
 
     <section id="depth" class="project">
@@ -67,11 +67,9 @@
         <span class="project-number">02</span>
         <h2>Emulated Depth Sensors</h2>
         <ul>
-          <li>Implemented online rendering of depth for emulated lidar and RGB-D sensors.</li>
-          <li>Utilized a compute shader to render depth on the GPU.</li>
-          <li>Converted depth data in camera space to XYZ coordinates in global space.</li>
-          <li>Employed to test the lidar and drive system, ensuring system safety.</li>
-          <li>Used to render the physical camera's sensor output in a virtual environment.</li>
+          <li>Built online depth rendering for emulated lidar and RGB-D sensors using a GPU compute shader.</li>
+          <li>Transformed depth data from camera space to global XYZ coordinates for downstream perception pipelines.</li>
+          <li>Used emulated sensors to validate the lidar and drive systems for safety compliance, and to reproduce physical camera output in a virtual environment.</li>
         </ul>
         <figure class="project-figure">
           <img src="images/page-4-0.png" alt="Lidar scan in strawberry field simulation" width="600" height="400">
@@ -88,10 +86,9 @@
         <span class="project-number">03</span>
         <h2>Unity Robotics Simulation</h2>
         <ul>
-          <li>Developed a robotics simulator using the Unity game engine.</li>
-          <li>Integrated the simulator with the control system, machine learning stack, and sensor stacks.</li>
-          <li>Utilized company-wide for development, deployment, and testing purposes.</li>
-          <li>Led the development of the Unity simulation project over three months, managing a team of two engineers.</li>
+          <li>Built a full robotics simulator in Unity, integrated with the control system, ML stack, and sensor pipelines.</li>
+          <li>Adopted company-wide as the primary tool for development, deployment validation, and testing.</li>
+          <li>Led the three-month development effort, managing a team of two engineers from prototype to production.</li>
         </ul>
         <figure class="project-figure">
           <img src="images/page-3-0.png" alt="Emulated gripper architecture" width="600" height="400">
@@ -104,21 +101,19 @@
     <section id="uc-davis" class="section-group" aria-labelledby="uc-davis-heading">
       <h2 id="uc-davis-heading" class="section-group-title">Masters Work — UC Davis</h2>
       <div class="section-group-intro">
-        <p>During my <strong>M.S. in Mechanical Engineering at UC Davis</strong> I worked as a researcher on motion planning and control for non-holonomic mobile robots. I implemented and validated a Model Predictive Controller (MPC) for constraint-aware trajectory tracking, designed path planning algorithms in C++, Python, and OMPL for collision-free navigation in cluttered environments, and developed full-stack mobile robot simulation in Gazebo and ROS. The projects below are the smooth curvature planner and the dynamics model and simulation used for that work.</p>
+        <p>During my <strong>M.S. in Mechanical Engineering at UC Davis</strong>, I researched motion planning and control for non-holonomic mobile robots. I implemented and validated a Model Predictive Controller (MPC) for constraint-aware trajectory tracking, designed path-planning algorithms in C++, Python, and OMPL for collision-free navigation in cluttered environments, and built full-stack mobile robot simulations in Gazebo and ROS.</p>
       </div>
 
     <section id="planner" class="project">
       <div class="project-card">
         <span class="project-number">04</span>
         <h2>Smooth Curvature Planner</h2>
-        <p class="project-lead">Developed planning algorithms for non-holonomic robots that respect acceleration and jerk constraints.</p>
-        <p><strong>Implemented multiple approaches:</strong></p>
+        <p class="project-lead">Developed planning algorithms for non-holonomic robots that respect acceleration and jerk constraints, and validated each approach in simulation and on hardware.</p>
         <ul>
-          <li><strong>RRT*</strong>, an online NLP optimizer, and a heuristic approach based on scientific literature.</li>
-          <li><strong>Backman Approach:</strong> Constructs paths from elementary segments while adhering to constraints.</li>
-          <li><strong>OMPL Approach:</strong> Uses an off-the-shelf solver that incorporates state equations and constraints to generate planning outputs.</li>
+          <li><strong>RRT*:</strong> Sampling-based planner paired with an online NLP optimizer and a heuristic method drawn from the literature.</li>
+          <li><strong>Backman Approach:</strong> Constructs paths from elementary curve segments while enforcing curvature and velocity constraints.</li>
+          <li><strong>OMPL Approach:</strong> Leverages an off-the-shelf solver with embedded state equations and constraints for rapid plan generation.</li>
         </ul>
-        <p>Tested the efficacy of these algorithms both in simulation and on hardware.</p>
         <figure class="project-figure">
           <img src="images/page-2-0.png" alt="Trajectory constraints on curvature and velocity" width="600" height="400">
         </figure>
@@ -134,11 +129,9 @@
         <span class="project-number">05</span>
         <h2>Robotic Dynamics Model and Simulation</h2>
         <ul>
-          <li>Created a dynamics model of a non-holonomic mobile robot for co-harvest applications.</li>
-          <li>Developed the model using Python, Gazebo, and ROS nodes.</li>
-          <li>Generated a URDF file from the CAD model.</li>
-          <li>Fused simulated odometry and GPS data for accurate localization.</li>
-          <li>Utilized the model to develop planning and control algorithms prior to hardware implementation.</li>
+          <li>Built a dynamics model of a non-holonomic mobile robot for co-harvest applications using Python, Gazebo, and ROS.</li>
+          <li>Generated a URDF from the CAD model and fused simulated odometry with GPS data for accurate localization.</li>
+          <li>Used the simulator as a development testbed, validating planning and control algorithms before deploying to hardware.</li>
         </ul>
         <figure class="project-figure">
           <img src="images/page-1-0.png" alt="Dynamics simulator architecture diagram" width="600" height="400">
